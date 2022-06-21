@@ -1,0 +1,29 @@
+﻿@model Author
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <form asp-action="create" method="post">
+                <div class="mb-3">
+                    <label asp-for="FullName" class="form-label">FullName</label>
+                    <input asp-for="FullName" type="text" class="form-control" id="fullname">
+                    <span class="text-danger" asp-validation-for="FullName"></span>
+
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BrithDate" class="form-label">BrithDate</label>
+                    <input asp-for="BrithDate" type="datetime" class="form-control" id="brithdate">
+                    <span class="text-danger" asp-validation-for="BrithDate"></span>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
